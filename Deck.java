@@ -37,7 +37,7 @@ public class Deck {
 		int suitIndex = 0;
 		int valueIndex = 0;
 		for (int i = 0; i < cards.length; i++) {
-			Card card = new Card(ranks[rankIndex], suits[suitIndex], value[valueIndex]);
+			Card card = new Card(ranks[rankIndex], suits[suitIndex], values[rankIndex]);
 			cards[i] = card;
 			rankIndex = (rankIndex + 1) % ranks.length;
 			if (rankIndex == 0) {
@@ -69,14 +69,14 @@ public class Deck {
 	 * Randomly permute the given collection of cards
 	 * and reset the size to represent the entire deck.
 	 */
-	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
-		size = cards.length;
-		for (int i = 0; i < cards.length; i++) {
-			cards[Math.random(cards.length)]
-		}
-
-	}
+	// public void shuffle() {
+	// 	/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+	// 	size = cards.length;
+	// 	for (int i = 0; i < cards.length; i++) {
+	// 		cards[Math.random(cards.length)]
+	// 	}
+	//
+	// }
 
 	/**
 	 * Deals a card from this deck.
@@ -110,7 +110,7 @@ public class Deck {
 
 		rtn = rtn + "\nDealt cards: \n";
 		for (int k = cards.length - 1; k >= size; k--) {
-			rtn = rtn + cards.get[k];
+			rtn = rtn + cards[k];
 			if (k != size) {
 				rtn = rtn + ", ";
 			}
